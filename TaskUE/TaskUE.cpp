@@ -1,5 +1,29 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
+#include <string>
+
+class Stack {
+private:
+    std::vector<std::string> elements;
+        
+public:
+    void push(const std::string& item) {
+        elements.push_back(item);
+    }
+        
+    std::string pop() {
+        if (elements.empty()) {
+            std::cout << "Stack is empty\n";
+            return "";
+        }
+        else {
+            std::string top = elements.back();
+            elements.pop_back();
+            return top;
+        }
+    }
+};
 
 class Vector
 {
